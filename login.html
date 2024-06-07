@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./login.css"/>
+    <title>Login page</title>
+    <style>
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;   
+}
+
+body {
+    background: linear-gradient(135deg,#777515,#5f0812);
+    background-attachment: fixed;
+}
+#form {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    width:380px;
+    margin:10vh auto 0 auto;
+    padding:20px 30px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+ 
+}
+#form .input-group {
+    width: 100%;
+    margin-bottom: 15px;
+
+}
+.btn {
+    margin:20px 0;
+    padding:6px 5px;
+    width:100%;
+    background-color:rgb(240, 35, 35);
+    border:1px solid rgb(240, 35, 52);
+    border-radius:15px;
+    color:whitesmoke;
+    font-size: 20px;
+}
+.input-group{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.input-group input {
+ 
+    padding:10px;
+    border:1px solid black;
+    border-radius: 5px;
+    margin-top: 5px;
+    cursor:text
+}
+.input-group input:focus{
+    outline:0;
+}
+
+
+    </style>
+</head>
+<body>
+    <form id="form" method="GET">
+        <h1>Login</h1>
+        
+        <div class="input-group">
+            <label for="e-mail">E-mail</label>
+            <input type="text" name="email" id="email" required>
+            <div class="error"></div>
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required>
+            <div class="error"></div>
+        </div>
+        
+    <button class="btn">Login</button>
+
+    </form>
+    
+    <script src="./login.js"></script>
+</body>
+</html>
